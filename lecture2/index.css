@@ -1,0 +1,46 @@
+.parent1{
+    /*             <!-- Diiiferent types of position values in CSS -->
+      1. static: static is a default position which means element will come in normal
+         flow as they are declared.
+      2. relative: Elements with a relative position are positioned relative to their normal position in the document flow. You can
+         use the top, right, bottom, and left properties to offset the element from its normal position.  
+      3. absolute: Elements with an absolute position are removed from the normal document flow and positioned relative to their nearest positioned ancestor. 
+         If there is no positioned ancestor, they are positioned relative to the initial containing block (usually the viewport). 
+         The top, right, bottom, and left properties can be used to position them precisely.
+      4. fixed: Elements with a fixed position are also removed from the normal document flow and positioned relative to the viewport. 
+         They remain in the same position even when the page is scrolled.
+         Useful for creating elements like sticky headers or footers.
+      5. sticky: Elements with a sticky position are positioned based on the user's scroll position. They act like a combination of relative and fixed positioning. Initially, they are in the normal flow, and then they become fixed when they reach a specified scroll position. 
+         You use top, right, bottom, or left to define the position where they become sticky.
+    */
+
+    /* 
+    Remember always give height in percentage or according to viewport height and width
+    width: 50vw;  50% of the viewport's width 
+    height: 75vh;  75% of the viewport's height 
+     */
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    margin: 10px;
+}
+.child1{
+     position: sticky;
+    top: 10px;
+    left: 10px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid red; 
+    background-color: red;
+}
+.child2{
+    width: 200px;
+    height: 200px;
+    border: 2px solid red; 
+    background-color: aqua;
+}
+.parent2{
+    height: 700px;
+    width: 700px;
+    background-color: brown;
+}

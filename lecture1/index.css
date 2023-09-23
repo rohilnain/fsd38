@@ -1,0 +1,19 @@
+/* this is how we use tags */
+ul{
+    color: red;
+}
+/* this is how we use class in css */
+.desikhana{
+    color:blueviolet;
+}
+/* this is how we use id */
+#mastkhana{
+    color:purple;
+}
+span{
+    color:yellow;
+}
+/* if you add !important declartion it takes precendence over other declartion */
+#h1id{
+    color:yellow !important;
+}

@@ -1,0 +1,43 @@
+.parent
+{
+display: flex;
+/* by default flex direction is row wise, justify content will center the item in 
+   flex direction weather it is row or column.
+   Align items will work in the opposite direction of flex direction
+   so if you want object to be in middle of flexbox, justify-content:center, align-items:center;
+*/
+/* play flexbox froggy game you will understand flexbox completely */
+
+/* 
+Sometimes reversing the row or column order of a container is not enough. In these cases, 
+we can apply the order property to individual items. By default, items have a value of 0, 
+but we can use this property to also set it to a positive or negative integer value (-2, -1, 0, 1, 2).
+in this 0 is the initial position of element
+
+Another property you can apply to individual items is align-self. 
+This property accepts the same values as align-items and its value for the specific item
+*/
+
+/* flex-direction: column; */
+justify-content: center;
+align-items: center;
+height: 100vh;
+width: 100vw;
+border: 2px solid black;
+
+}
+.child1
+{
+height: 200px;
+width: 200px;
+border: 2px solid red;
+margin: 10px;
+}
+.child2
+{
+    height: 200px;
+    width: 200px;
+    border: 2px solid green;
+    margin: 10px;
+
+}
