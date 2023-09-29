@@ -1,0 +1,61 @@
+main{
+    display: grid;
+    place-content: center;
+    background-color: rgb(248,249,250);
+    /* margin: 0; */
+}
+main>h1{
+    text-align: center;
+}
+.card_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 70vw;
+    grid-column-gap: 10px;
+    grid-row-gap: 40px;
+}
+.card{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 2fr 0.5fr 0.5fr 0.5fr;
+    grid-template-areas: 
+       "img img img img img"
+       "mountain_calling_portion mountain_calling_portion mountain_calling_portion mountain_calling_portion mountain_calling_portion"
+       "para para para para para"
+       "read bookmark heart share ellipis";
+    gap: 5px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid black;
+}
+.mountain_calling_portion{
+    grid-area:mountain_calling_portion;
+    padding: 2px;
+}
+.img{
+    grid-area: img;
+    height: 100%;
+    width: 100%;
+}
+.para{
+    grid-area: para;
+    padding: 2px;
+}
+.read{
+    grid-area: read;
+    padding: 2px;
+}
+.bookmark{
+    grid-area: bookmark;
+}
+.heart{
+    grid-area: heart;
+}
+.share{
+    grid-area: share;
+}
+.ellipis{
+    grid-area: ellipis;
+}
+
