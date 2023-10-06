@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+}
+.mainsection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+.topdiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    margin: 10px;
+}
+.topdiv>button{
+    font-size: 15px;
+    padding: 0px 40px;
+}
+.guessmynumber{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    color: white;
+    font-size: 50px;
+}
+.midsection{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.midsection>.leftline{
+    width: 910px;
+    height: 2px;
+    background-color: white;
+}
+.midsection>.rightline{
+    width: 910px;
+    height: 2px;
+    background-color: white;
+}
+.questionmark{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 200px;
+    background-color: white;
+}
+.questionmark>p{
+    color: black;
+    font-size: 50px;
+}
+.lowersection{
+    display: flex;
+    justify-content: space-around;
+}
+.guessnumber{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+}
+.guessnumber>.numbershown{
+     height: 100px;
+     width: 200px;
+     border: 1px solid white;
+     color: white;
+     font-size:80px;
+     background-color: black;
+}
+.guessnumber>.buttoncheck{
+    margin: 10px;
+    font-size: 30px;
+    padding: 5px 40px;
+}
+.guessstats{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.guessstats>p{
+    color: white;
+    font-size: 30px;
+}
+.guessstats>.score{
+    display: flex;
+    color: white;
+    font-size: 30px;
+}
+.guessstats>.highscore{
+    display: flex;
+    color: white;
+    font-size: 30px;
+}
