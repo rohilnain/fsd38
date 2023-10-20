@@ -30,7 +30,7 @@ console.log("fifth statement");
 //second after call stack execution there happens executions of MICROTASK QUEUE
 //like process.nextclick(), promise callback, async callback MICOTASKQUEUE
 
-//third after microtask queue execution execution happens for web apis
+//third after microtask queue execution execution happens for Macrotask Queues web apis
 //such as setTimeout, setInterval, setImmediate
 
 //lets see this with example
