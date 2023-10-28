@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body{
+    margin: 0;
+    padding: 0;
+} */
+/* .navigationbar{
+    display:flex;
+    justify-content: space-around;
+    width:100vw;
+    height:5%;
+    border: 1px solid black;
+}
+.navigationbar>img{
+    width: 120px;
+    height: 90%;
+} */
+/* .info{
+    display: flex;
+    align-items: center;
+    width: 15%;
+    justify-content: space-between;
+    margin: 10px;
+} */
+/* .body{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+} */
+/* .body>input{
+    height: 50px;
+    margin-top: 10px;
+} */
+/* .restaurant{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+}
+.restaurantcard{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 10px;
+    border: 1px solid black;
+}
+.restaurantcard>img{
+    width: 100%;
+    height: 50%;
+}
+.restaurantinfo{
+    width: 100%;
+    height: 50%;
+
+} */
+/* .restaurantnamerating{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.restaurantcuisineprice{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.restaurantguidelinedeliverytime{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+} */
+/* .footer{
+    display: flex;
+    height: 10%;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+} */
+
