@@ -1,4 +1,4 @@
-const Restaurantsdetails = [
+export const restaurantsdetails = [
     {
       id: "1",
       name: "Krishna Veg",
@@ -88,7 +88,7 @@ const Restaurantsdetails = [
       uuid: "f2eed466-0983-400d-9ed2-b019f45df8d2",
       city: "6",
       area: "Nigdi",
-      avgRating: "3.8",
+      avgRating: "4.8",
       cloudinaryImageId: "bxxfr0v1f0pjwfcxhwub",
       cuisines: ["North Indian", "Maharashtrian ", "Indian "],
       tags: [],
@@ -140,5 +140,3 @@ const Restaurantsdetails = [
       deliveryTime: 22,
     },
   ];
-
-  export default Restaurantsdetails;

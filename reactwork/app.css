@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.width-90{
+width:90%;
+}
+.width-10{
+width:10%;
+}
+.width-25{
+width:25%;
+}
+.height-25{
+width:25%;
+}
+
 /* body{
     margin: 0;
     padding: 0;

@@ -1,6 +1,7 @@
 import { CDN_IMG_URL } from "../utilities/constants";
 
  function RestaurantCard(props){
+    
     const { name, cuisines, avgRating, costForTwoString, deliveryTime,cloudinaryImageId } =props.details;
     return(
             <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-orange-100
