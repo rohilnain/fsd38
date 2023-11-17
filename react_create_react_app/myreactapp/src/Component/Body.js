@@ -1,23 +1,31 @@
 import RestaurantCard from "./RestaurantCard";
 import Searchbar from "./Searchbar";
-import { restaurantsdetails } from "../utilities/restaurantsdetail";
 import {useState,useEffect} from 'react';
 import Shimmer from "./Shimmer";
 import { Restaurant_API } from "../utilities/constants";
 function Body(){
-    const [filteredrestaurant,setfileteredrestaurant]=useState(restaurantsdetails);
+    const [filteredrestaurant,setfileteredrestaurant]=useState(null);
     useEffect(()=>{
         fetchRestuarantDetails();
     },[]);
     async function fetchRestuarantDetails()
     {
         try{
-        var data=await fetch(Restaurant_API)
-        var datajson=await data.json();
-        var restaurants=datajson?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-        console.log(restaurants);
-        //setfileteredrestaurant(restaurants)
-        setfileteredrestaurant(restaurants);
+        const data=await fetch(Restaurant_API)
+        const datajson=await data.json();
+        const tempdata=datajson?.data;
+        // var restaurantsList;
+        // for(var i in tempdata){
+        // if(!restaurantsList) restaurantsList=i?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+        // }
+         var restaurantsList=datajson?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+         if(!restaurantsList) restaurantsList=datajson?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+        console.log(restaurantsList);
+        if (restaurantsList) {
+            setfileteredrestaurant(restaurantsList);
+        } else {
+            console.error("Invalid data structure:", datajson);
+        }
         }
         catch(error){
             console.log(error);
@@ -28,9 +36,9 @@ function Body(){
         <Searchbar  filteredrestaurant={filteredrestaurant} setfileteredrestaurant={setfileteredrestaurant}/>
         <div className='flex flex-wrap justify-center w-full '>
         {
-        filteredrestaurant==undefined? <Shimmer/>:
+        filteredrestaurant==null? <Shimmer/>:
             filteredrestaurant.map((restaurant)=>{
-                return <RestaurantCard key={restaurant.info.id} details={restaurant.info} />
+                return restaurant.info ?(<RestaurantCard key={restaurant.info.id} details={restaurant.info} />):null;
             })
         }
         </div>

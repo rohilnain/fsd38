@@ -8,12 +8,12 @@ function Searchbar(props){
         setInputText(searchText);
     }
     const filterRestaurant=()=>{
-        var restaurantsList=restaurantsdetails.filter(restaurant=>{return restaurant.name.toLowerCase()
+        var restaurantsList=props.filteredrestaurant.filter(restaurant=>{return restaurant.info.name.toLowerCase()
             .includes(inputText.toLowerCase())});
         props.setfileteredrestaurant(restaurantsList);
     }
     const filtertopRestaurant=()=>{
-        var restaurantsList=props.filteredrestaurant.slice().sort((a, b) => parseFloat(b.avgRating) - parseFloat(a.avgRating));
+        var restaurantsList=props.filteredrestaurant.slice().sort((a, b) => parseFloat(b.info.avgRating) - parseFloat(a.info.avgRating));
         props.setfileteredrestaurant(restaurantsList);
     }
     return(

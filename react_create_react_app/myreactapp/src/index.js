@@ -10,7 +10,12 @@ import Profile from './Component/Profile';
 import About from './Component/About';
 import Contact from './Component/Contact';
 import Licensing from './Component/Licensing';
-
+import RestaurantMenu from './Component/RestaurantMenu';
+import store from './utilities/store';
+import { Provider } from 'react-redux';
+import { Cart } from './Component/Cart';
+import { useState } from 'react';
+import ContextProvider from './utilities/ContextProvider';
 
 //it is used to make body of html page to have zero margin and zero padding intially
 <div>
@@ -23,12 +28,15 @@ import Licensing from './Component/Licensing';
 </div>
 
 function App(){
+    const [userName, setUserName] = useState("Rohil");
     return(
-        <>
+        <Provider store={store}>
+        <ContextProvider value={userName}>
         <Navigationbar/>
         <Outlet/>
         <Footer/>
-        </>
+        </ContextProvider>
+        </Provider>
     );
 };
 //create browser take array of objects
@@ -57,6 +65,15 @@ const appRouter=createBrowserRouter([
       {
         path:"/Licensing",
         element:<Licensing/>
+      },
+      {
+        path:"/restaurantmenu/:id",// dynamic routing
+        element:<RestaurantMenu/>
+      }
+      ,
+      {
+        path:"/cart",
+        element:<Cart/>
       }
     ]
 
