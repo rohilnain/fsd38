@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { CDN_IMG_URL } from "../utilities/constants";
  function RestaurantCard(props){
     
-    const { name, cuisines, avgRatingString, costForTwo,locality,cloudinaryImageId } =props.details;
+    const { name, cuisines, avgRating,deliveryTime,cloudinaryImageId } =props.details;
     return(
-            <Link to={`/restaurantmenu/${props.details.id}`}>
+            <Link to={`/restaurantmenu/${props.details._id}`}>
             <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-orange-100
                 dark:border-gray-700 m-2">
                 <a href="#">
@@ -14,15 +14,15 @@ import { CDN_IMG_URL } from "../utilities/constants";
                 <div class="p-5">
                         <div className='flex justify-between m:2'>
                             <h3>{name}</h3>
-                            <h4>{avgRatingString}</h4>
+                            <h4>{avgRating}</h4>
                         </div>
                         <div className='flex justify-between  m:2'>
                             <h4>{cuisines[0]} {cuisines[1]} ..</h4>
-                            <h4>{costForTwo}</h4>
+                            <h4>300</h4>
                         </div>
                         <div className='flex justify-between m:2'>
                             <h4>Contact less delivery</h4>
-                            <h4>{locality}</h4>
+                            <h4>{deliveryTime} min</h4>
                         </div>
                         <div className="openmenu">
                             <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white

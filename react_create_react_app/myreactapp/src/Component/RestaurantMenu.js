@@ -13,13 +13,13 @@ const RestaurantMenu=()=>{
         var menu_data=useMenuApi(id);
         console.log("menu_data", menu_data);
         if (menu_data === null) return <Shimmer />;
-        var itemCards =
-        menu_data?.data?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]
-            ?.card?.card?.itemCards;
-        if(!itemCards) itemCards =
-        menu_data?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]
-            ?.card?.card?.itemCards;
-        console.log("itemsCards", itemCards);    
+        var itemCards =menu_data;
+        // menu_data?.data?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]
+        //     ?.card?.card?.itemCards;
+        // if(!itemCards) itemCards =
+        // menu_data?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]
+        //     ?.card?.card?.itemCards;
+        // console.log("itemsCards", itemCards);    
         if(!itemCards) return <Shimmer />;
         const setCartItem=(item)=>{
             dispatch(addToCart(item));
@@ -34,24 +34,24 @@ const RestaurantMenu=()=>{
                     {itemCards.map((item) => (
                       <div
                         data-testid="foodItems"
-                        key={item.card.info.id}
+                        //key={item.id}
                         className="p-2 m-2 border-gray-200  border-t-2 text-left flex justify-between"
                       >
                         <div className="w-9/12">
                           <div className="py-2">
-                            <span>{item.card.info.name}</span>
+                            <span>{item.name}</span>
                             <span>
                               - ₹
-                              {item.card.info.price
-                                ? item.card.info.price / 100
-                                : item.card.info.name / 100}
+                              {item.price
+                                ? item.price 
+                                : item.name}
                             </span>
                           </div>
-                          <p className="text-xs">{item.card.info.description}</p>
+                          <p className="text-xs">{item.description}</p>
                         </div>
                         <div className="w-3/12 p-4">
                           <img
-                            src={CDN_IMG_URL + item.card.info.imageId}
+                            src={CDN_IMG_URL + item.imageId}
                             className="w-full"
                           />
                           <div className="flex justify-center  m-2 rounded-lg dark:bg-blue-500 text-white ">

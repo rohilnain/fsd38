@@ -8,7 +8,8 @@ const restaurantSchema=new Schema({
     deliveryTime:String,
     avgRating:String,
     cloudinaryImageId:String,
-    costForTwoString:String
+    costForTwoString:String,
+    menuItems:Array
 })
 
 const restaurantModel=model("restaurants",restaurantSchema);

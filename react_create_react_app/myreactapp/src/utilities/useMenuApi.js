@@ -7,9 +7,11 @@ export const useMenuApi=(id)=>{
     },[]);
     const [menuData,setMenuData]=useState(null);
     async function fetchMenuApiData(id){
-        const data=await fetch(MENU_API+id);
+        const data=await fetch("http://localhost:5000/api/restaurant/"+id);
         const datajson=await data.json();
-        setMenuData(datajson);
+        const menuItems=datajson.menuItems;
+        console.log(menuItems);
+        setMenuData(menuItems);
     }
     return menuData; 
 }
